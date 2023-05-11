@@ -404,7 +404,6 @@ body {
 .skilled-architecture__description p {
   font-size: 1.5rem;
   padding: 3.375rem 15rem 3.375rem 4rem;
-  max-width: 23.3125rem;
 }
 @media screen and (max-width: 768px) {
   .skilled-architecture__description p {
