@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center;
   padding: 2rem 2.5rem 0;
+  flex-wrap: unset;
   @media screen and (max-width : 320px) {
     padding: 1.875rem 1.25rem 0;
   }
@@ -273,7 +274,6 @@ body {
     p {
       font-size: 1.5rem;
       padding: 3.375rem 15rem 3.375rem 4rem;
-      max-width: 23.3125rem;
       @media screen and (max-width : 768px) {
         padding: 0;
         margin-top: 1.5rem;
@@ -326,7 +326,13 @@ body {
       margin-right: 0;
       margin-top: 4rem;
     }
+    @media screen and (max-width : 320px) {
+      flex: unset;
+      height: 17.5rem;
+      width: 17.5rem;
+    }
     img {
+      object-fit: cover;
       height: 100%;
       width: 100%;
     }
@@ -438,15 +444,17 @@ body {
       }
       @media screen and (max-width : 320px) {
         width: 16rem;
-        height: 12.25rem;
+        height: 16.875rem;
         padding: 2rem;
         &:not(:last-child) {
           margin-bottom: 1.25rem;
         }
       }
       p {
+        font-size: 1rem;
+        line-height: 24px;
         @media screen and (max-width : 320px) {
-          font-size: 1rem;
+          font-size: .875rem;
         }
       }      
       &__person {
@@ -502,9 +510,22 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    &__carousel-inner {
+      &--carousel-item {
+        &--row {
+          display: flex;
+          flex-wrap: unset;
+          margin-left: -4.6875rem;
+          @media screen and (max-width : 320px) {
+            margin-left: -6.25rem;
+          }
+        }
+      }
+    }
     &__image-wrapper {
       height: 26rem;
       width: 26rem;
+      padding: 0;
       &:not(:last-child) {
         margin-right: 2rem;
       }
@@ -516,8 +537,8 @@ body {
         width: 17.125rem;
       }
       @media screen and (max-width : 320px) {
-        height: 6.25rem;
-        width: 7.5625rem;
+        height: 7.5625rem;
+        max-width: 7.5625rem;
         &:not(:last-child) {
           margin-right: .625rem;
         }
