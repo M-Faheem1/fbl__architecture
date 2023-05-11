@@ -25,6 +25,22 @@ ul {
   list-style-type: none;
 }
 
+@media screen and (max-width: 2920px) {
+  .custom-container {
+    padding: 0 11.25rem;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .custom-container {
+    padding: 0 6.25rem;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .custom-container {
+    padding: 0;
+  }
+}
+
 h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -83,6 +99,7 @@ body {
   display: flex;
   align-items: center;
   padding: 2rem 2.5rem 0;
+  flex-wrap: unset;
 }
 @media screen and (max-width: 320px) {
   .navbar {
@@ -455,7 +472,16 @@ body {
     margin-top: 4rem;
   }
 }
+@media screen and (max-width: 320px) {
+  .summarize__image-wrapper {
+    flex: unset;
+    height: 17.5rem;
+    width: 17.5rem;
+  }
+}
 .summarize__image-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -589,16 +615,20 @@ body {
 @media screen and (max-width: 320px) {
   .testimonial__cards-section__card {
     width: 16rem;
-    height: 12.25rem;
+    height: 16.875rem;
     padding: 2rem;
   }
   .testimonial__cards-section__card:not(:last-child) {
     margin-bottom: 1.25rem;
   }
 }
+.testimonial__cards-section__card p {
+  font-size: 1rem;
+  line-height: 24px;
+}
 @media screen and (max-width: 320px) {
   .testimonial__cards-section__card p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .testimonial__cards-section__card__person {
@@ -663,9 +693,20 @@ body {
   justify-content: center;
   margin-top: 2rem;
 }
+.our-projects__image-section__carousel-inner--carousel-item--row {
+  display: flex;
+  flex-wrap: unset;
+  margin-left: -4.6875rem;
+}
+@media screen and (max-width: 320px) {
+  .our-projects__image-section__carousel-inner--carousel-item--row {
+    margin-left: -6.25rem;
+  }
+}
 .our-projects__image-section__image-wrapper {
   height: 26rem;
   width: 26rem;
+  padding: 0;
 }
 .our-projects__image-section__image-wrapper:not(:last-child) {
   margin-right: 2rem;
@@ -681,8 +722,8 @@ body {
 }
 @media screen and (max-width: 320px) {
   .our-projects__image-section__image-wrapper {
-    height: 6.25rem;
-    width: 7.5625rem;
+    height: 7.5625rem;
+    max-width: 7.5625rem;
   }
   .our-projects__image-section__image-wrapper:not(:last-child) {
     margin-right: 0.625rem;
